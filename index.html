@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+	<title>HTML5 Client side Image puzzle</title>
+	<link rel="stylesheet" href="styles.css"/>
+	<script src="./js/slider.js" type="text/javascript"></script>
+	<script src="./js/Controller/controller.js" type="text/javascript"></script>
+	<script src="./js/Model/model.js" type="text/javascript"></script>
+	<script src="./js/View/Box.js" type="text/javascript"></script>
+	<script src="./js/View/Drag.js" type="text/javascript"></script>
+	<script src="./js/View/view.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="mainContent" class="hide">
+
+<div class="gameBoard">
+<div id="source" class="button" onclick="slider.helpclick('source');">Source</div><div id="game" onclick="slider.helpclick('game');" class="button">Game</div><div id="shuffle" onclick="slider.helpclick('shuffle');" class="button">Shuffle</div><span id="timeElapsed" class="floatRight timeCount"></span>
+</div>
+<div class="gameBoard">
+<div id="source_holder" class="hide"></div><div id="slider"></div><div id="previewDrag"></div>
+</div>
+<div id="helpText"><br/>Cool!! Your image is turned into puzzle. 
+<ol>
+<li>Solve the puzzle by rearranging the jumbled tiles into the image you have uploaded.</li>
+<li>Grey colored tile is an open space.</li>
+<li>Finding legally movable tile is very simple, Any tile which has open space in its row or column can be legally moved. In desktop browsers it will be highlighted on hovering the mouse.</li>
+<li>To move tile/tiles just simply click/drag/tap on it. Upon doing so the tile/tiles will slide it to an open space.</li>
+</ol>
+
+</div>
+</div>
+<div id="uploadContainer">
+
+
+<br/><br/>
+<div id="dragContainer">
+<br/><br/>Drop an image here from your machine <br/> (Or) <br/>
+<input type="file" id="imageholder" /><br/><br/><br/><br/> 500x500 image is preferrable. Don't you have? <br/> No problem!! We will shrink it for you :)
+</div>
+</div>
+
+</body>
+</html>
+
